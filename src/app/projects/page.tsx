@@ -1,5 +1,5 @@
 import { getProjects } from "@/lib/mdx";
-import { ProjectCard } from "@/components/ui/ProjectCard";
+import { ProjectList } from "@/components/projects/project-list";
 
 export const metadata = {
     title: "Projects - My Portfolio",
@@ -20,11 +20,7 @@ export default function ProjectsPage() {
                 </p>
             </div>
 
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                {projects.map((project, index) => (
-                    <ProjectCard key={project.slug} project={project} index={index} />
-                ))}
-            </div>
+            <ProjectList projects={projects} />
         </div>
     );
 }
