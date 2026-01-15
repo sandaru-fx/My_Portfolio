@@ -16,8 +16,34 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Developer Portfolio",
-  description: "A developer portfolio built with Next.js and Three.js",
+  title: {
+    default: "Developer Portfolio",
+    template: "%s | Developer Portfolio",
+  },
+  description: "A premium developer portfolio and blog built with Next.js, Three.js, and Tailwind CSS. Showcasing projects and sharing technical insights.",
+  openGraph: {
+    title: "Developer Portfolio",
+    description: "A premium developer portfolio and blog built with Next.js, Three.js, and Tailwind CSS.",
+    url: "https://portfolio-demo.com",
+    siteName: "Developer Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    title: "Developer Portfolio",
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
